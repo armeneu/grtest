@@ -1,0 +1,18 @@
+/* Desktop: min-width 1400px */
+@media (min-width: 1400px){
+  .projects-grid{ grid-template-columns: repeat(3, 1fr); }
+  .projects-wrap{ max-width: 1400px; }
+}
+
+/* Tablet: max-width 991px */
+@media (max-width: 991px){
+  .projects-grid{ grid-template-columns: repeat(2, 1fr); }
+  .projects-wrap{ padding: 32px 12px; }
+}
+
+/* Mobile: max-width 480px */
+@media (max-width: 480px){
+  .projects-grid{ grid-template-columns: 1fr; }
+  .projects-controls{ justify-content: center; }
+  .single-project .project-gallery img{ width: 100%; height: auto; }
+}

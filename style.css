@@ -1,0 +1,129 @@
+/*
+Theme Name: Twenty Twenty-Four
+Theme URI: https://wordpress.org/themes/twentytwentyfour/
+Author: the WordPress team
+Author URI: https://wordpress.org
+Description: Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Requires at least: 6.4
+Tested up to: 6.9
+Requires PHP: 7.0
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentyfour
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+/*
+Theme Name: Twenty Twenty-Four Child (Projects)
+Theme URI:  https://example.com/
+Description: Child theme for test assignment — Projects CPT and templates.
+Author:      Candidate
+Template: twentytwentyfour
+Version:     1.0.0
+Text Domain: tt4-child
+*/
+
+/* CSS variables and basic rules */
+:root{
+  --accent-color: #1e73be;
+  --gap: 24px;
+  --radius: 8px;
+  --card-bg: #ffffff;
+  --text-color: #222222;
+  --muted: #6b6b6b;
+}
+
+body {
+  color: var(--text-color);
+  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Projects list wrapper */
+.projects-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+/* Controls */
+.projects-controls{
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom: var(--gap);
+  gap: 12px;
+}
+
+.projects-select{
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Grid */
+.projects-grid{
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, 1fr); /* desktop default */
+}
+
+/* Card */
+.project-card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-thumb{
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display:block;
+}
+
+.project-body{
+  padding: 16px;
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+}
+
+.project-title{
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.project-meta{
+  font-size: 0.9rem;
+  color: var(--muted);
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.project-price{
+  margin-left:auto;
+  font-weight:700;
+  color: var(--accent-color);
+}
+
+/* Single project */
+.single-project .project-gallery{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top: 16px;
+}
+.single-project .project-gallery img{ width: calc(33.333% - 8px); height: 220px; object-fit:cover; border-radius:6px; }
+
+/* Small helpers */
+.center { text-align:center; }
+.hidden { display:none; }
+
